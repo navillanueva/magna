@@ -1,3 +1,8 @@
+//  defines how your data is structured in the database
+// typegraphql generates the types for using typescript to create our graphql APIs
+// you can create an enum Role (USER/ADMIN)
+// create relations by linking models
+
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URI")
