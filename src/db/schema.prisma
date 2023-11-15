@@ -27,9 +27,18 @@ model Sample {
   name String
 }
 
+enum TYPE {
+  SECONDS
+  DAILY
+  MONTHLY
+}
+
 model Allocation {
   id        String @id @default(uuid())
   amount    Int
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  vestingPeriod TYPE
+  vestingStart DateTime
+  vestingEnd DateTime
 }
